@@ -16,7 +16,7 @@ let quotaBalance = parseFloat(document
     .getElementById('quota').innerText) 
 
 
-let dialog = document.getElementById('my_modal_1')
+
 
     
     
@@ -27,12 +27,12 @@ let dialog = document.getElementById('my_modal_1')
         }
         
 
-
+// btn-1
 document.getElementById('btnOne')
 .addEventListener('click',function(){
     
     let donationAmmount = getInputByForm('inputOne') 
-    let location = 'Fmine-2024 at Feni,Bangladesh'
+
 
         if(myBalance >= donationAmmount ){
             let newBalance = myBalance - donationAmmount;
@@ -42,19 +42,62 @@ document.getElementById('btnOne')
             document.getElementById('noakhali').innerText = noakhaliDonation;
 
             const p = document.createElement('p')
-            p.innerText = `${donationAmmount} Taka is Donated for ${location}`
+            p.innerText = `${donationAmmount} Taka Donate for Flood at Noakhali, Bangladesh`
             console.log(p)
             document.getElementById('transaction-container').appendChild(p)
-
-            
-
-            
-            // console.log(newBalance,noakhaliDonation)
         }
         else{
             alert('please try again leter')
         }
 })
+
+// btn-2
+document.getElementById('btnTwo')
+.addEventListener('click',function(){
+    
+    let donationAmmount = getInputByForm('inputTwo') 
+
+        if(myBalance >= donationAmmount ){
+            let newBalance = myBalance - donationAmmount;
+            let feniDonation = feniBalance + donationAmmount;
+
+            document.getElementById('balance').innerText = newBalance
+            document.getElementById('feni').innerText = feniDonation;
+
+            const p = document.createElement('p')
+            p.innerText = `${donationAmmount} Taka Donate for Flood Relief in Feni,Bangladesh`
+            console.log(p)
+            document.getElementById('transaction-container').appendChild(p)
+        }
+        else{
+            alert('please try again leter')
+        }
+})
+
+// btn-3
+document.getElementById('btnThree')
+.addEventListener('click',function(){
+    
+    let donationAmmount = getInputByForm('inputThree') 
+  
+
+        if(myBalance >= donationAmmount ){
+            let newBalance = myBalance - donationAmmount;
+            let quotaDonation = quotaBalance + donationAmmount;
+
+            document.getElementById('balance').innerText = newBalance
+            document.getElementById('quota').innerText = quotaDonation;
+
+            const p = document.createElement('p')
+            p.innerText = `${donationAmmount} taka donated for Aid for Injured in the Quota Movement`
+            console.log(p)
+            document.getElementById('transaction-container').appendChild(p)
+        }
+        else{
+            alert('please try again leter')
+        }
+})
+
 
 
 
