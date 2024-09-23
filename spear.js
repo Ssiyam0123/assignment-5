@@ -12,7 +12,8 @@ function getInputByForm (id){
 }
 
 // noakhali
-document.getElementById('btnOne').addEventListener('click',function(){
+document.getElementById('btnOne').addEventListener('click',function(event){
+   
     let donated = getInputByForm('inputOne')
 
     if(typeof donated === 'number' && donated > 0 && mainBalance >= donated){
@@ -31,7 +32,8 @@ document.getElementById('btnOne').addEventListener('click',function(){
 
 
 // feni
-document.getElementById('btnTwo').addEventListener('click',function(){
+document.getElementById('btnTwo').addEventListener('click',function(event){
+   
     let donated = getInputByForm('inputTwo')
 
     if(typeof donated === 'number' && donated > 0 && mainBalance > donated){
@@ -50,7 +52,8 @@ document.getElementById('btnTwo').addEventListener('click',function(){
 
 
 // quota
-document.getElementById('btnThree').addEventListener('click',function(){
+document.getElementById('btnThree').addEventListener('click',function(event){
+    
     let donated = getInputByForm('inputThree')
 
     if(typeof donated === 'number' && donated > 0 && mainBalance > donated){
@@ -73,6 +76,8 @@ document.getElementById('btnThree').addEventListener('click',function(){
 document.getElementById('historyBtn').addEventListener('click',function(){
     document.getElementById('historyBtn').style.backgroundColor = '#B4F461'
     document.getElementById('donationBtn').style.backgroundColor = 'transparent'
+
+    showSectionbyId('transaction-container')
 })
 
 
@@ -80,5 +85,14 @@ document.getElementById('historyBtn').addEventListener('click',function(){
 document.getElementById('donationBtn').addEventListener('click',function(){
     document.getElementById('donationBtn').style.backgroundColor = '#B4F461'
     document.getElementById('historyBtn').style.backgroundColor = 'transparent'
+    showSectionbyId('cards')
 })
+
+function showSectionbyId (id){
+    document.getElementById('cards').classList.add('hidden')
+
+
+    document.getElementById(id).classList.remove('hidden')
+}
+
 
