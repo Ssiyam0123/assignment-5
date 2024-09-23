@@ -1,18 +1,18 @@
 
 
-let myBalance = parseFloat(document
+const myBalance = parseFloat(document
     .getElementById('balance').innerText)
 
 
-let noakhaliBalance = parseFloat(document
+const noakhaliBalance = parseFloat(document
     .getElementById('noakhali').innerText)
 
 
-let feniBalance = parseFloat(document
+const feniBalance = parseFloat(document
     .getElementById('feni').innerText)
 
 
-let quotaBalance = parseFloat(document
+const quotaBalance = parseFloat(document
     .getElementById('quota').innerText) 
 
 
@@ -21,8 +21,8 @@ let quotaBalance = parseFloat(document
     
     
     function getInputByForm (id){
-        let donationInput = document.getElementById(id).value;
-        let donationNumber = parseFloat(donationInput)
+        const donationInput = document.getElementById(id).value;
+        const donationNumber = parseFloat(donationInput)
         return donationNumber;
         }
         
@@ -30,13 +30,29 @@ let quotaBalance = parseFloat(document
 // btn-1
 document.getElementById('btnOne')
 .addEventListener('click',function(){
+
+
+    const myBalance = parseFloat(document
+    .getElementById('balance').innerText)
+
+
+const noakhaliBalance = parseFloat(document
+    .getElementById('noakhali').innerText)
+
+
+const feniBalance = parseFloat(document
+    .getElementById('feni').innerText)
+
+
+const quotaBalance = parseFloat(document
+    .getElementById('quota').innerText) 
     
-    let donationAmmount = getInputByForm('inputOne') 
+    const donationAmmount = getInputByForm('inputOne') 
 
 
         if(myBalance >= donationAmmount ){
-            let newBalance = myBalance - donationAmmount;
-            let noakhaliDonation = noakhaliBalance + donationAmmount;
+            const newBalance = myBalance - donationAmmount;
+            const noakhaliDonation = noakhaliBalance + donationAmmount;
 
             document.getElementById('balance').innerText = newBalance
             document.getElementById('noakhali').innerText = noakhaliDonation;

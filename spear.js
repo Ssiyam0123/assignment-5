@@ -1,9 +1,4 @@
 
-let mainBalance = parseFloat(document.getElementById('balance').innerText)
-let noakhaliBalance = parseFloat(document.getElementById('noakhali').innerText)
-let feniBalance = parseFloat(document.getElementById('feni').innerText)
-let quotaBalance = parseFloat(document.getElementById('quota').innerText)
-
 // function for input field
 function getInputByForm (id){
     let inputValue = document.getElementById(id).value
@@ -12,16 +7,20 @@ function getInputByForm (id){
 }
 
 // noakhali
-document.getElementById('btnOne').addEventListener('click',function(event){
-   
+document.getElementById('btnOne').addEventListener('click',function(){
     let donated = getInputByForm('inputOne')
+    let mainBalance = parseFloat(document.getElementById('balance').innerText)
+    let noakhaliBalance = parseFloat(document.getElementById('noakhali').innerText)
+    let feniBalance = parseFloat(document.getElementById('feni').innerText)
+    let quotaBalance = parseFloat(document.getElementById('quota').innerText)
 
     if(typeof donated === 'number' && donated > 0 && mainBalance >= donated){
-
+        
         let currentBalance = mainBalance - donated;
         let totalDonated = noakhaliBalance + donated
         document.getElementById('noakhali').innerText = totalDonated
         document.getElementById('balance').innerText = currentBalance
+        return 0;
     }
 
     else {
@@ -35,6 +34,10 @@ document.getElementById('btnOne').addEventListener('click',function(event){
 document.getElementById('btnTwo').addEventListener('click',function(event){
    
     let donated = getInputByForm('inputTwo')
+    let mainBalance = parseFloat(document.getElementById('balance').innerText)
+    let noakhaliBalance = parseFloat(document.getElementById('noakhali').innerText)
+    let feniBalance = parseFloat(document.getElementById('feni').innerText)
+    let quotaBalance = parseFloat(document.getElementById('quota').innerText)
 
     if(typeof donated === 'number' && donated > 0 && mainBalance > donated){
 
@@ -55,6 +58,10 @@ document.getElementById('btnTwo').addEventListener('click',function(event){
 document.getElementById('btnThree').addEventListener('click',function(event){
     
     let donated = getInputByForm('inputThree')
+    let mainBalance = parseFloat(document.getElementById('balance').innerText)
+    let noakhaliBalance = parseFloat(document.getElementById('noakhali').innerText)
+    let feniBalance = parseFloat(document.getElementById('feni').innerText)
+    let quotaBalance = parseFloat(document.getElementById('quota').innerText)
 
     if(typeof donated === 'number' && donated > 0 && mainBalance > donated){
 
