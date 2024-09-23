@@ -68,4 +68,17 @@ document.getElementById('btnThree').addEventListener('click',function(){
 })
 
 
+// history button
+
+document.getElementById('historyBtn').addEventListener('click',function(){
+    document.getElementById('historyBtn').style.backgroundColor = '#B4F461'
+    document.getElementById('donationBtn').style.backgroundColor = 'transparent'
+})
+
+
+// donation button
+document.getElementById('donationBtn').addEventListener('click',function(){
+    document.getElementById('donationBtn').style.backgroundColor = '#B4F461'
+    document.getElementById('historyBtn').style.backgroundColor = 'transparent'
+})
 
