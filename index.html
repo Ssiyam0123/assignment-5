@@ -76,7 +76,7 @@
                     <p class="text-[1rem] font-light"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     
                         <input id="inputOne" type="number" placeholder="Write Donation Amount" class="input input-bordered input-primary w-full max-w-xs border-black text-[1rem] font-light" />
-                        <button onclick="releaseEvents" id="btnOne" class="btn bg-[#B4F461]">Donate Now</button>
+                        <button id="btnOne" class="btn bg-[#B4F461]">Donate Now</button>
             </div>
         </div>
 
@@ -120,16 +120,31 @@
     </section>
 
 <!-- transaction section -->
-    <section>
-        <div>
-            <p id="transaction-container">cdi baeeeee</p>
-        </div>
+    <section id="transaction-container" class="mb-10">
+        <!-- <div class="border-2 border-slate-400 rounded-md w-[90%] mx-auto p-5 space-y-2">
+            
+        </div> -->
     </section>
 
 
 
+
+
+<!-- modal -->
+<dialog id="successModal" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Donation Successful!</h3>
+    <p class="py-4">Thank you for your generous donation!</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
     <!-- js link -->
-     <!-- <script src="./index.js"></script> -->
-      <script src="./spear.js"></script>
+      <!-- <script src="./spear.js"></script> -->
+      <script src="./mian.js"></script>
 </body>
 </html>
