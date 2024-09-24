@@ -107,11 +107,10 @@ document.getElementById('btnThree').addEventListener('click',function(){
           
        historyContainer.insertBefore(newHistoryEntry, historyContainer.firstChild)
 
-
-
-
     } else {
+
     alert('Please enter a valid amount.');
+
     };
 })
 
@@ -119,6 +118,7 @@ document.getElementById('btnThree').addEventListener('click',function(){
 
 function showSectionbyId (id){
     document.getElementById('cards').classList.add('hidden')
+     document.getElementById('transaction-container').classList.add('hidden')
 
 
     document.getElementById(id).classList.remove('hidden')
@@ -129,6 +129,7 @@ document.getElementById('donationBtn').addEventListener('click',function(){
     document.getElementById('donationBtn').style.backgroundColor = '#B4F461'
     document.getElementById('historyBtn').style.backgroundColor = 'transparent'
     showSectionbyId('cards')
+    
 
 })
 
@@ -139,11 +140,7 @@ document.getElementById('historyBtn').addEventListener('click',function(){
     document.getElementById('donationBtn').style.backgroundColor = 'transparent'
 
     showSectionbyId('transaction-container')
+    
 })
 
-// // history
-// const history = document.createElement('div')
-// history.className = "bg-white p-4 rounded-md border-2 border-gray-300 mb-4 shadow-lg"
-// history.innerHtml = `
-// <p>hi</p>
-   
+
