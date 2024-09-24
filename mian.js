@@ -43,22 +43,28 @@ document.getElementById('btnOne').addEventListener('click',function(){
     let donated = getValueFromInput('inputOne')
 
     if (!isNaN(donated) && donated > 0) {
-    let balanceBeUpdate = updateBalances('noakhali',donated)
+        let mainBalance = parseFloat(document.getElementById('balance').innerText)
 
+        if(mainBalance > donated){
+            let balanceBeUpdate = updateBalances('noakhali',donated)
+    
         // history
-     let historyContainer = document.getElementById('transaction-container');
-     let newHistoryEntry = document.createElement('div');
-     newHistoryEntry.className = "bg-white p-4 rounded-md border-2 border-gray-300 mb-4 shadow-md w-[90%] mx-auto";
+        let historyContainer = document.getElementById('transaction-container');
+        let newHistoryEntry = document.createElement('div');
+        newHistoryEntry.className = "bg-white p-4 rounded-md border-2 border-gray-300 mb-4 shadow-md w-[90%] mx-auto";
+   
+        newHistoryEntry.innerHTML = 
+               `<P class="text-xl font-normal mb-2">${donated.toFixed(2)} Taka Donated for Flood at Noakhali, Bangladesh</p>
+               <P class="text-sm font-light">${new Date().toLocaleString()}</p>`;
+           
+        historyContainer.insertBefore(newHistoryEntry, historyContainer.firstChild);
+        }
 
-     newHistoryEntry.innerHTML = 
-            `<P class="text-xl font-normal mb-2">${donated.toFixed(2)} Taka donated for flood at Noakhali</p>
-            <P class="text-sm font-light">${new Date().toLocaleString()}</p>`;
-        
-     historyContainer.insertBefore(newHistoryEntry, historyContainer.firstChild);
-
-    }
-
-    else {
+        else{
+            alert('Insufficient balance')
+        }
+ 
+    } else {
     alert('Please enter a valid amount.');
     };
 })
@@ -68,7 +74,10 @@ document.getElementById('btnTwo').addEventListener('click',function(){
     let donated = getValueFromInput('inputTwo')
 
     if (!isNaN(donated) && donated > 0) {
-    let balanceBeUpdate = updateBalances('feni',donated)
+        let mainBalance = parseFloat(document.getElementById('balance').innerText)
+
+        if(mainBalance > donated){
+            let balanceBeUpdate = updateBalances('feni',donated)
     
         // history
         let historyContainer = document.getElementById('transaction-container');
@@ -80,9 +89,12 @@ document.getElementById('btnTwo').addEventListener('click',function(){
                <P class="text-sm font-light">${new Date().toLocaleString()}</p>`;
            
         historyContainer.insertBefore(newHistoryEntry, historyContainer.firstChild);
-   
-       
-    
+        }
+
+        else{
+            alert('Insufficient balance')
+        }
+ 
     } else {
     alert('Please enter a valid amount.');
     };
@@ -93,24 +105,29 @@ document.getElementById('btnThree').addEventListener('click',function(){
     let donated = getValueFromInput('inputThree')
 
     if (!isNaN(donated) && donated > 0) {
-    let balanceBeUpdate = updateBalances('quota',donated)
+        let mainBalance = parseFloat(document.getElementById('balance').innerText)
 
+        if(mainBalance > donated){
+            let balanceBeUpdate = updateBalances('quota',donated)
+    
+        // history
+        let historyContainer = document.getElementById('transaction-container');
+        let newHistoryEntry = document.createElement('div');
+        newHistoryEntry.className = "bg-white p-4 rounded-md border-2 border-gray-300 mb-4 shadow-md w-[90%] mx-auto";
+   
+        newHistoryEntry.innerHTML = 
+               `<P class="text-xl font-normal mb-2">${donated.toFixed(2)} Taka donated for Injured in the Quota Movement</p>
+               <P class="text-sm font-light">${new Date().toLocaleString()}</p>`;
+           
+        historyContainer.insertBefore(newHistoryEntry, historyContainer.firstChild);
+        }
 
-       // history
-       let historyContainer = document.getElementById('transaction-container');
-       let newHistoryEntry = document.createElement('div');
-       newHistoryEntry.className = "bg-white p-4 rounded-md border-2 border-gray-300 mb-4 shadow-md w-[90%] mx-auto";
-  
-       newHistoryEntry.innerHTML = 
-              `<P class="text-xl font-normal mb-2">${donated.toFixed(2)}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
-              <P class="text-sm font-light">${new Date().toLocaleString()}</p>`;
-          
-       historyContainer.insertBefore(newHistoryEntry, historyContainer.firstChild)
-
+        else{
+            alert('Insufficient balance')
+        }
+ 
     } else {
-
     alert('Please enter a valid amount.');
-
     };
 })
 

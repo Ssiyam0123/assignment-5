@@ -67,3 +67,42 @@ function showSectionbyId(id) {
     document.getElementById('transaction-container').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById('btnTwo').addEventListener('click', function() {
+    let donated = getValueFromInput('inputTwo');  // Get the donation amount
+
+    if (!isNaN(donated) && donated > 0) {
+        let mainBalance = parseFloat(document.getElementById('balance').innerText);
+
+        if (mainBalance >= donated) {
+            updateBalances('feni', donated);  // Update the balance
+
+            // Add donation history entry
+            const historyContainer = document.getElementById('transaction-container');
+            const newHistoryEntry = document.createElement('div');
+            newHistoryEntry.className = "bg-white p-4 rounded-md border-2 border-gray-300 mb-4 shadow-lg w-[90%] mx-auto";
+            newHistoryEntry.innerHTML = `
+                <p>${donated} BDT donated for Feni</p>
+                <p>${new Date().toLocaleString()}</p>`;
+            historyContainer.appendChild(newHistoryEntry);  // Add new entry to history
+        } else {
+            alert('Insufficient balance, please try again.');
+        }
+    } else {
+        alert('Please enter a valid amount.');
+    }
+});
+
