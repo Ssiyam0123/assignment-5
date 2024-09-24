@@ -38,17 +38,16 @@ document.getElementById('btnOne').addEventListener('click',function(){
     if (!isNaN(donated) && donated > 0) {
     let balanceBeUpdate = updateBalances('noakhali',donated)
 
+        // history
+     let historyContainer = document.getElementById('transaction-container');
+     let newHistoryEntry = document.createElement('div');
+     newHistoryEntry.className = "bg-white p-4 rounded-md border-2 border-gray-300 mb-4 shadow-md w-[90%] mx-auto";
 
-     // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-     const historyContainer = document.getElementById('transaction-container');
-     const newHistoryEntry = document.createElement('div');
-     newHistoryEntry.className = "bg-white p-4 rounded-md border-2 border-gray-300 mb-4 shadow-lg w-[90%] mx-auto";
-     newHistoryEntry.innerHTML = `<p>${new Date().toLocaleString()}</p>
-                                  `;
-     historyContainer.appendChild(newHistoryEntry);
-     // ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-
-
+     newHistoryEntry.innerHTML = 
+            `<P class="text-xl font-normal mb-2">${donated.toFixed(2)} Taka donated for flood at Noakhali</p>
+            <P class="text-sm font-light">${new Date().toLocaleString()}</p>`;
+        
+     historyContainer.insertBefore(newHistoryEntry, historyContainer.firstChild);
 
     }
 
