@@ -55,7 +55,7 @@ document.getElementById('btnOne').addEventListener('click',function(){
    
         newHistoryEntry.innerHTML = 
                `<P class="text-xl font-normal mb-2">${donated.toFixed(2)} Taka Donated for Flood at Noakhali, Bangladesh</p>
-               <P class="text-sm font-light">${new Date().toLocaleString()}</p>`;
+               <P class="text-sm font-light">${new Date().toString()}</p>`;
            
         historyContainer.insertBefore(newHistoryEntry, historyContainer.firstChild);
         }
@@ -86,7 +86,7 @@ document.getElementById('btnTwo').addEventListener('click',function(){
    
         newHistoryEntry.innerHTML = 
                `<P class="text-xl font-normal mb-2">${donated.toFixed(2)} Taka donated for flood at Feni</p>
-               <P class="text-sm font-light">${new Date().toLocaleString()}</p>`;
+               <P class="text-sm font-light">${new Date().toString()}</p>`;
            
         historyContainer.insertBefore(newHistoryEntry, historyContainer.firstChild);
         }
@@ -117,7 +117,7 @@ document.getElementById('btnThree').addEventListener('click',function(){
    
         newHistoryEntry.innerHTML = 
                `<P class="text-xl font-normal mb-2">${donated.toFixed(2)} Taka donated for Injured in the Quota Movement</p>
-               <P class="text-sm font-light">${new Date().toLocaleString()}</p>`;
+               <P class="text-sm font-light">${new Date().toString()}</p>`;
            
         historyContainer.insertBefore(newHistoryEntry, historyContainer.firstChild);
         }
