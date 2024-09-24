@@ -1,3 +1,10 @@
+// blog button
+document.getElementById('blogBtn').addEventListener('click',function(){
+    window.location.href = './blog.html'
+})
+
+
+
 // get value for inout field
 function getValueFromInput(id){
     let donation = document.getElementById(id).value

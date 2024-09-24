@@ -1,3 +1,7 @@
+// blog button
+
+
+
 function updateBalances(id, balanceChange) {
     const balanceElem = document.getElementById('balance');
     let currentMainBalance = parseFloat(balanceElem.innerText);
