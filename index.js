@@ -12,6 +12,7 @@ function getValueFromInput(id){
     return donationNumber;
 }
 
+
 function updateBalances (id,donatedTaka){
     let mainBalance = document.getElementById('balance').innerText;
     let fundBalance = parseFloat(document.getElementById(id).innerText)
@@ -21,7 +22,7 @@ function updateBalances (id,donatedTaka){
         let currentBalance = balanceNumber - donatedTaka;
         let fundTotal = fundBalance  + donatedTaka;
 
-        // dom input data
+        // dom
         document.getElementById('balance').innerText = currentBalance.toFixed(2);
         document.getElementById(id).innerText = fundTotal.toFixed(2)
 
@@ -45,7 +46,7 @@ document.getElementById('btnOne').addEventListener('click',function(){
     if (!isNaN(donated) && donated > 0) {
         let mainBalance = parseFloat(document.getElementById('balance').innerText)
 
-        if(mainBalance > donated){
+        if(mainBalance >= donated){
             let balanceBeUpdate = updateBalances('noakhali',donated)
     
         // history
@@ -64,7 +65,8 @@ document.getElementById('btnOne').addEventListener('click',function(){
             alert('Insufficient balance')
         }
  
-    } else {
+    } 
+    else {
     alert('Please enter a valid amount.');
     };
 })
@@ -76,7 +78,7 @@ document.getElementById('btnTwo').addEventListener('click',function(){
     if (!isNaN(donated) && donated > 0) {
         let mainBalance = parseFloat(document.getElementById('balance').innerText)
 
-        if(mainBalance > donated){
+        if(mainBalance >= donated){
             let balanceBeUpdate = updateBalances('feni',donated)
     
         // history
@@ -107,7 +109,7 @@ document.getElementById('btnThree').addEventListener('click',function(){
     if (!isNaN(donated) && donated > 0) {
         let mainBalance = parseFloat(document.getElementById('balance').innerText)
 
-        if(mainBalance > donated){
+        if(mainBalance >= donated){
             let balanceBeUpdate = updateBalances('quota',donated)
     
         // history
