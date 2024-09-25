@@ -1,8 +1,7 @@
 // blog button
 document.getElementById('blogBtn').addEventListener('click',function(){
-    window.location.href = './blog.html'
+    window.location.href = 'blog.html'
 })
-
 
 
 // get value for inout field
@@ -11,7 +10,6 @@ function getValueFromInput(id){
     let donationNumber = parseFloat(donation)
     return donationNumber;
 }
-
 
 function updateBalances (id,donatedTaka){
     let mainBalance = document.getElementById('balance').innerText;
@@ -22,7 +20,7 @@ function updateBalances (id,donatedTaka){
         let currentBalance = balanceNumber - donatedTaka;
         let fundTotal = fundBalance  + donatedTaka;
 
-        // dom
+        // dom input data
         document.getElementById('balance').innerText = currentBalance.toFixed(2);
         document.getElementById(id).innerText = fundTotal.toFixed(2)
 
@@ -65,8 +63,7 @@ document.getElementById('btnOne').addEventListener('click',function(){
             alert('Insufficient balance')
         }
  
-    } 
-    else {
+    } else {
     alert('Please enter a valid amount.');
     };
 })
