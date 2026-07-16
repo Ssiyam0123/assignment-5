@@ -1,6 +1,6 @@
-﻿# donate-bangladesh
+# donate-bangladesh
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen?style=for-the-badge)](https://siyam-donate-bangladesh.vercel.app////)
+**Live Demo:** [https://siyam-donate-bangladesh.vercel.app/](https://siyam-donate-bangladesh.vercel.app/)
 
 Donate Bangladesh is a web-based donation portal designed to assist relief efforts and gather support for disaster-stricken areas in Bangladesh, including flood relief in Noakhali, Feni, and quotas movement injured support.
 
