@@ -1,6 +1,6 @@
-# donate-bangladesh
+﻿# donate-bangladesh
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen?style=for-the-badge)](https://siyam-io.github.io/donate-bangladesh/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen?style=for-the-badge)](https://siyam-donate-bangladesh.vercel.app////)
 
 Donate Bangladesh is a web-based donation portal designed to assist relief efforts and gather support for disaster-stricken areas in Bangladesh, including flood relief in Noakhali, Feni, and quotas movement injured support.
 
@@ -17,3 +17,6 @@ Donate Bangladesh is a web-based donation portal designed to assist relief effor
 - TailwindCSS & DaisyUI
 - JavaScript (Vanilla DOM Manipulation)
 - Font: Lexend (Google Fonts)
+
+
+
